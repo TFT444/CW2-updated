@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Theme toggle
+  // DARK MODE TOGGLE
   const toggleBtn = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 
-  // Cart functionality
+  // CART FUNCTIONALITY
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   const cartCount = document.getElementById("cart-count");
   if (cartCount) cartCount.textContent = cart.length;
@@ -31,14 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const price = button.dataset.price;
       const image = button.dataset.image;
 
-      // Add to cart
       cart.push({ name, price, image });
       localStorage.setItem("cart", JSON.stringify(cart));
 
-      // Update cart count
       if (cartCount) cartCount.textContent = cart.length;
 
-      // Redirect to cart
+      // Redirect to cart.html after adding
       window.location.href = "cart.html";
     });
   });

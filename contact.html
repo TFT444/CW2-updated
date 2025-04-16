@@ -29,7 +29,10 @@
         <i class="ri-search-line"></i>
         <i class="ri-shopping-cart-2-line"></i>
         <i class="ri-menu-line"></i>
-      
+        <a href="cart.html" class="cart-link">
+          <i class="ri-shopping-cart-2-line"></i>
+          <span id="cart-count">0</span>
+        </a>
         <!-- 🌙☀️ Dark Mode Icon Switch -->
         <button id="theme-toggle" class="theme-toggle">
           <i class="ri-moon-fill" id="theme-icon"></i>
@@ -60,15 +63,15 @@
     <!-- Your Box -->
     <div class="team-card">
       <img src="images/your-photo.jpg" alt="Your Photo">
-      <h3>John Doe</h3>
-      <p>📞 +91-9876543210</p>
-      <p>🪪 ID: 2021001234</p>
+      <h3>Tanvir Farhad</h3>
+      <p>📞 +088-07516757828</p>
+      <p>🪪 ID: 10427071</p>
     </div>
   
     <!-- Friend 1 Box -->
     <div class="team-card">
       <img src="images/friend1.jpg" alt="Friend One">
-      <h3>Jane Smith</h3>
+      <h3>Prabash Dwip</h3>
       <p>📞 +91-9123456780</p>
       <p>🪪 ID: 2021005678</p>
     </div>
@@ -76,7 +79,7 @@
     <!-- Friend 2 Box -->
     <div class="team-card">
       <img src="images/friend2.jpg" alt="Friend Two">
-      <h3>Alex Brown</h3>
+      <h3>Saksham Bhandari</h3>
       <p>📞 +91-9988776655</p>
       <p>🪪 ID: 2021009876</p>
     </div>
@@ -106,5 +109,38 @@
       localStorage.setItem("theme", isDark ? "dark" : "light");
     });
   </script>
-</body>
+</body><!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Nike</h3>
+      <p>Your one-stop shop for all Nike shoes – comfort, performance, and style.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <i class="ri-facebook-fill"></i>
+        <i class="ri-instagram-line"></i>
+        <i class="ri-twitter-fill"></i>
+        <i class="ri-youtube-fill"></i>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Nike Store. All rights reserved.</p>
+  </div>
+</footer>
 </html>

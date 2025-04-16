@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Now | Nike</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="nav">
+    <div class="nav-part-1">
+      <img src="images/nike-logo-0.png" alt="Nike Logo">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-part-2">
+      <i class="ri-search-line"></i>
+      <i class="ri-shopping-cart-2-line"></i>
+      <i class="ri-menu-line"></i>
+      <a href="cart.html" class="cart-link">
+        <i class="ri-shopping-cart-2-line"></i>
+        <span id="cart-count">0</span>
+      </a>
+      <button id="theme-toggle" class="theme-toggle">
+        <i class="ri-moon-fill" id="theme-icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <h1 style="text-align:center; padding: 30px 0;">All Shoes Collection</h1>
+    <div class="product-list">
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="images/AIR Wolf.jpg" alt="Nike Air Wolf">
+        <h4>Nike Air Wolf</h4>
+        <p class="catagory">Men's Shoes</p>
+        <p class="color">Color: White</p>
+        <div class="price-cart">
+          <p class="price">£178.99</p>
+          <button class="add-to-cart"
+                  data-name="Nike Air Wolf"
+                  data-price="178.99"
+                  data-image="images/AIR Wolf.jpg">Add to Cart</button>
+        </div>
+      </div>
+      
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product">
+        <img src="images/air-peg-2k5-shoes.png" alt="Nike Air Peg 2K5">
+        <h4>Nike Air Peg 2K5</h4>
+        <p class="catagory">Men's Shoes</p>
+        <p class="color">Color: White</p>
+        <div class="price-cart">
+          <p class="price">£119.99</p>
+          <button class="add-to-cart" data-name="Nike Air Peg 2K5" data-price="119.99" data-image="images/air-peg-2k5-shoes.png">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product">
+        <img src="images/lunar-roam-shoes.png" alt="Nike Lunar Roam">
+        <h4>Nike Lunar Roam</h4>
+        <p class="catagory">Men's Shoes</p>
+        <p class="color">Color: Sleepy Blue</p>
+        <div class="price-cart">
+          <p class="price">£159.95</p>
+          <button class="add-to-cart" data-name="Nike Lunar Roam" data-price="159.95" data-image="images/lunar-roam-shoes.png">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product">
+        <img src="images/nocta-glide-shoes.png" alt="Nike Nocta Glide">
+        <h4>Nike Nocta Glide</h4>
+        <p class="catagory">Men's Shoes</p>
+        <p class="color">Color: White</p>
+        <div class="price-cart">
+          <p class="price">£129.99</p>
+          <button class="add-to-cart" data-name="Nike Nocta Glide" data-price="129.99" data-image="images/nocta-glide-shoes.png">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product">
+        <img src="images/terminator-high-shoes.png" alt="Nike Terminator High">
+        <h4>Nike Terminator High</h4>
+        <p class="catagory">Men's Shoes</p>
+        <p class="color">Color: Sleepy Blue</p>
+        <div class="price-cart">
+          <p class="price">£149.99</p>
+          <button class="add-to-cart" data-name="Nike Terminator High" data-price="149.99" data-image="images/terminator-high-shoes.png">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product">
+        <img src="images/AIR MAX DRIFIT.jpg" alt="Nike Air Max Dn8">
+        <h4>Nike Air Max Dn8</h4>
+        <p class="catagory">Women's Running Shoes</p>
+        <p class="color">Color: Pink</p>
+        <div class="price-cart">
+          <p class="price">£125.00</p>
+          <button class="add-to-cart" data-name="Nike Air Max Dn8" data-price="125.00" data-image="images/AIR MAX DRIFIT.jpg">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product">
+        <img src="images/NIKE+AIR+MAX+PLUS+OG.jpg" alt="Nike InfinityRN 4">
+        <h4>Nike InfinityRN 4</h4>
+        <p class="catagory">Women's Training Shoes</p>
+        <p class="color">Color: White</p>
+        <div class="price-cart">
+          <p class="price">£145.00</p>
+          <button class="add-to-cart" data-name="Nike InfinityRN 4" data-price="145.00" data-image="images/NIKE+AIR+MAX+PLUS+OG.jpg">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product">
+        <img src="images/Women Trainers Air.jpg" alt="Nike Motiva">
+        <h4>Nike Motiva</h4>
+        <p class="catagory">Women's Everyday Shoes</p>
+        <p class="color">Color: Beige</p>
+        <div class="price-cart">
+          <p class="price">£110.00</p>
+          <button class="add-to-cart" data-name="Nike Motiva" data-price="110.00" data-image="images/Women Trainers Air.jpg">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Nike</h3>
+        <p>Your one-stop shop for all Nike shoes – comfort, performance, and style.</p>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <i class="ri-facebook-fill"></i>
+          <i class="ri-instagram-line"></i>
+          <i class="ri-twitter-fill"></i>
+          <i class="ri-youtube-fill"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Nike Store. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

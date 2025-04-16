@@ -1,3 +1,5 @@
+/* your full existing CSS */
+
 *{
   margin: 0;
   padding: 0;
@@ -29,6 +31,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #000;
 }
 
 .nav img{
@@ -43,6 +46,7 @@ body{
   align-items: center;
   justify-content: center;
   list-style: none;
+  color: #000;
 }
 
 .nav-part-1 ul li{
@@ -125,6 +129,7 @@ body{
   box-shadow: 0 5px 10px rgba(17, 0, 17, 0.3);
   display: inline-block;
   margin-right: 20px;
+  flex-shrink: 0;
 }
 
 .product img{
@@ -156,42 +161,6 @@ body{
   text-transform: capitalize;
 }
 
-.price{
-  font: 18px;
-  position: absolute;
-  bottom: 5%;
-  font-weight: 600;
-  text-transform: capitalize;
-}
-
-.product {
-  height: 370px;
-  width: 250px;
-  background-color: #1011;
-  position: relative;
-  box-shadow: 0 5px 10px rgba(17, 0, 17, 0.3);
-  display: inline-block;
-  margin-right: 20px;
-  flex-shrink: 0; 
-}
-.content-right {
-  height: 100%;
-  width: 60%;
-  padding: 110px 100px;
-  white-space: nowrap;
-  overflow: hidden; /* Hide scrollbars */
-  position: relative;
-}
-
-.content-right {
-  height: 100%;
-  width: 60%;
-  padding: 110px 100px;
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-}
-
 .content-slider {
   display: inline-flex;
   animation: scrollProducts 20s linear infinite;
@@ -205,6 +174,7 @@ body{
     transform: translateX(-100%);
   }
 }
+
 .contact-content {
   display: flex;
   justify-content: space-between;
@@ -263,6 +233,7 @@ body{
 .contact-form button:hover {
   background-color: #333;
 }
+
 .success-message {
   display: none;
   background-color: #28a745;
@@ -281,7 +252,8 @@ body{
   80% { opacity: 1; }
   100% { opacity: 0; transform: translateY(-10px); }
 }
-/* Toggle switch style */
+
+/* Toggle Switch */
 .theme-switch {
   position: relative;
   display: inline-block;
@@ -326,6 +298,8 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(24px);
 }
+
+/* Dark Mode */
 body.dark {
   background-color: #111;
   color: white;
@@ -355,7 +329,7 @@ body.dark .contact-form textarea {
   color: white;
   border: 1px solid #555;
 }
-/* Dark Mode Button */
+
 .theme-toggle {
   background: none;
   border: none;
@@ -370,39 +344,10 @@ body.dark .theme-toggle {
   color: white;
 }
 
-/* Dark Theme Styles */
-body.dark {
-  background-color: #111;
-  color: white;
-}
-
-body.dark .nav {
-  background-color: #000;
-}
-
-body.dark .nav-part-1 ul li a {
-  color: white;
-}
-
-body.dark .btn {
-  background-color: white;
-  color: black;
-}
-
-body.dark .product {
-  background-color: #222;
-  color: white;
-}
-
-body.dark .contact-form input,
-body.dark .contact-form textarea {
-  background-color: #222;
-  color: white;
-  border: 1px solid #555;
-}
 .content-slider:hover {
   animation-play-state: paused;
 }
+
 .team-section {
   display: flex;
   justify-content: center;
@@ -442,4 +387,187 @@ body.dark .contact-form textarea {
 
 .team-card:hover {
   transform: translateY(-8px);
+}
+
+.cart-container {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.cart-container .product {
+  background: white;
+  padding: 20px;
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.cart-container .product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.cart-container .product h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.cart-container .product p {
+  font-size: 14px;
+  color: #333;
+}
+
+.remove-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.remove-btn:hover {
+  background-color: #b52a36;
+}
+
+.cart-total {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ✅ Final updated section */
+.price-cart {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.price-cart .price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.price-cart .add-to-cart {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.price-cart .add-to-cart:hover {
+  background-color: #333;
+}
+.payment-section {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.payment-section h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#payment-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#payment-form button {
+  margin-top: 20px;
+}
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 40px 60px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons i {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.social-icons i:hover {
+  color: #aaa;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 20px;
+  font-size: 13px;
 }

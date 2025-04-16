@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Cart</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="nav">
+    <a href="index.html" class="logo-link">
+      <img src="images/nike-logo-0.png" alt="Logo" style="height: 50px;">
+    </a>
+    <h2>My Cart 🛒</h2>
+    <a href="index.html" class="btn">Continue Shopping</a>
+    <a href="checkout.html" class="btn">Checkout</a>
+  </div>
+
+  <!-- Cart Content -->
+  <div class="cart-container" id="cart-container">
+    <!-- JS will fill this -->
+  </div>
+
+  <!-- JS to Load Cart Items -->
+   <!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Nike</h3>
+        <p>Your one-stop shop for all Nike shoes – comfort, performance, and style.</p>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <i class="ri-facebook-fill"></i>
+          <i class="ri-instagram-line"></i>
+          <i class="ri-twitter-fill"></i>
+          <i class="ri-youtube-fill"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Nike Store. All rights reserved.</p>
+    </div>
+  </footer>
+  
+ <script>
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const container = document.getElementById("cart-container");
+
+  function renderCart() {
+    container.innerHTML = "";
+    let total = 0;
+
+    if (cart.length === 0) {
+      container.innerHTML = "<p style='padding:40px;'>Your cart is empty 🛒</p>";
+      return;
+    }
+
+    cart.forEach((item, index) => {
+      total += parseFloat(item.price);
+
+      container.innerHTML += `
+        <div class="product">
+          <img src="${item.image}" alt="${item.name}">
+          <h3>${item.name}</h3>
+          <p>Price: £${item.price}</p>
+          <button class="remove-btn" data-index="${index}">Remove</button>
+        </div>
+      `;
+    });
+
+    container.innerHTML += `
+      <div class="cart-total">
+        <h2>Total: £${total.toFixed(2)}</h2>
+      </div>
+    `;
+  }
+
+  // Initial load
+  renderCart();
+
+  // Remove item when button clicked
+  document.addEventListener("click", function(e) {
+    if (e.target.classList.contains("remove-btn")) {
+      const index = e.target.dataset.index;
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -28,8 +28,11 @@
     </div>
     <div class="nav-part-2">
         <i class="ri-search-line"></i>
-        <i class="ri-shopping-cart-2-line"></i>
         <i class="ri-menu-line"></i>
+        <a href="cart.html" class="cart-link">
+          <i class="ri-shopping-cart-2-line"></i>
+          <span id="cart-count">0</span>
+        </a>
       
         <!-- 🌙☀️ Dark Mode Icon Switch -->
         <button id="theme-toggle" class="theme-toggle">
@@ -46,7 +49,7 @@
             <h5>Explore Men's Collection</h5>
             <h1>Men's Nike Shoes</h1>
             <p>Discover the newest Men's Nike sneakers designed for running, training, and everyday style.</p>
-            <button class="btn">Shop Now</button>
+            <a href="shop.html"><button class="btn">Shop Now</button></a>
         </div>
 
         <!-- Right Side (Slider) -->
@@ -81,6 +84,41 @@
     </div> <!-- End of content -->
 
 </div> <!-- End of main -->
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Nike</h3>
+      <p>Your one-stop shop for all Nike shoes – comfort, performance, and style.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <i class="ri-facebook-fill"></i>
+        <i class="ri-instagram-line"></i>
+        <i class="ri-twitter-fill"></i>
+        <i class="ri-youtube-fill"></i>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Nike Store. All rights reserved.</p>
+  </div>
+</footer>
+
 <script>
     const toggleBtn = document.getElementById("theme-toggle");
     const themeIcon = document.getElementById("theme-icon");

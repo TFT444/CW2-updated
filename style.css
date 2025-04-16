@@ -705,3 +705,52 @@ body.dark .footer a {
   overflow: hidden;
   margin-right: 20px;
 }
+/* 📱 Mobile and Tablet Responsive */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-part-1,
+  .nav-part-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-part-1 ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-part-1 ul li {
+    margin: 10px 0;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .team-section {
+    padding: 30px 20px;
+  }
+
+  .team-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
